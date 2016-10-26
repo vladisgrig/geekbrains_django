@@ -10,6 +10,9 @@ class Me(models.Model):
     photo = models.ImageField(upload_to='images/')
     description = models.TextField()
 
+    def __str__(self):
+        return self.first_name + " " + self.second_name
+
 class Education(models.Model):
     man = models.ForeignKey(Me, on_delete=models.CASCADE)
     place = models.CharField(max_length=100)
@@ -19,6 +22,9 @@ class Education(models.Model):
     year_of_graduation = models.IntegerField(choices=YEAR_CHOICES, null=True)
     specialization = models.CharField(max_length=200)
 
+    def __str__(self):
+        return self.place
+
 class PlaceOfWork(models.Model):
     man = models.ForeignKey(Me, on_delete=models.CASCADE)
     company = models.CharField(max_length=100)
@@ -27,3 +33,6 @@ class PlaceOfWork(models.Model):
     started_in = models.IntegerField(choices=YEAR_CHOICES)
     end_date = models.IntegerField(choices=YEAR_CHOICES, null=True)
     position = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.company

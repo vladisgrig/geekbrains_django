@@ -65,14 +65,23 @@
     <header>
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <img class="img-responsive" src="{{MEDIA_URL}}{{me.photo.url}}" alt="" style="width: 256px; height: 256px; border-radius:50%;">
-                    <div class="intro-text">
-                        <span class="name">{{me.first_name}} {{me.second_name}}</span>
-                        <hr class="star-light">
-                        <span class="skills">Программист - Аналитик - Менеджер проектов</span>
+                <div class="col-lg-12 text-center">
+                  <h2>Образование</h2>
+                  <hr class="star-light">
+                </div>
+                {% for place in education_places %}
+                <div class="col-lg-4 text-right">
+                    <div>
+                      <h3>{{place.year_of_the_beginning}} - {{place.year_of_graduation}}</h3>
                     </div>
                 </div>
+                <div class="col-lg-8 text-left">
+                    <div>
+                      <h3>{{place.place}}</h3>
+                      <p>{{place.specialization}}</p>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
         </div>
     </header>
