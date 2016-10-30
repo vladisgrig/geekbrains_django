@@ -1,67 +1,10 @@
-{% load staticfiles %}
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
+{% block title %}
+    <title>Опыт работы</title>
+{% endblock %}
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Freelancer - Start Bootstrap Theme</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-
-    <!-- Theme CSS -->
-    <link href="{% static 'css/freelancer.min.css' %}" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body id="page-top" class="index">
-
-    <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <a class="navbar-brand" href="/">Привет, мир!</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div>
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/education/">Образование</a>
-                    </li>
-                    <li>
-                        <a href="/work/">Опыт работы</a>
-                    </li>
-                    <li>
-                        <a href="#contacts">Контакты</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-
-    <!-- Header -->
+{% block content %}
     <header>
         <div class="container">
             <div class="row">
@@ -91,49 +34,4 @@
             </div>
         </div>
     </header>
-
-    <!-- Footer -->
-    <footer class="text-center">
-        <div class="footer-above">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-col col-md-4">
-                        <h3>День рождения</h3>
-                        <p>{{me.birthdate}}</p>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3 id="contacts">Контакты</h3>
-                        <ul class="list-inline">
-                            <li>
-                                <a href="https://vk.com/vladisgrig" targer="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-vk"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/vladisgrig" targer="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
-                            </li>
-                            <li>
-                                <a href="mailto:vladisgrig@yandex.ru" class="btn-social btn-outline"><i class="fa fa-fw fa-envelope-o"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3>Обо мне</h3>
-                        <p>{{me.description}}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-below">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        Copyright &copy; {{me.first_name}} {{me.second_name}} 2016
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-
-</body>
-
-</html>
+{% endblock %}
