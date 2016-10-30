@@ -1,0 +1,7 @@
+h3 > a {
+  color: #fff;
+}
+
+h3 > a:hover{
+  color: #2C3E50;
+};

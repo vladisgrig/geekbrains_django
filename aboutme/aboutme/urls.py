@@ -24,7 +24,7 @@ urlpatterns = [
     url(r'^education/$', education),
     url(r'^work/$', work_places),
     url(r'^$', main),
-    url(r'^/admin/', admin.site.urls),
+    url(r'^admin/', admin.site.urls),
 ]
 
 if settings.DEBUG:

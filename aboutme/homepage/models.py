@@ -21,6 +21,7 @@ class Education(models.Model):
     year_of_the_beginning = models.IntegerField(choices=YEAR_CHOICES)
     year_of_graduation = models.IntegerField(choices=YEAR_CHOICES, null=True)
     specialization = models.CharField(max_length=200)
+    site = models.URLField(default='')
 
     def __str__(self):
         return self.place
@@ -33,6 +34,7 @@ class PlaceOfWork(models.Model):
     started_in = models.IntegerField(choices=YEAR_CHOICES)
     end_date = models.IntegerField(choices=YEAR_CHOICES, null=True)
     position = models.CharField(max_length=50)
+    site = models.URLField(default='')
 
     def __str__(self):
         return self.company
