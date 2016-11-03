@@ -1,5 +1,5 @@
 from django.shortcuts import render, render_to_response
-from .models import Me, Education, PlaceOfWork
+from .models import Me, Education, PlaceOfWork, Hobby
 
 # Create your views here.
 def main(request):
@@ -18,3 +18,8 @@ def work_places(request):
     work_places = PlaceOfWork.objects.all()
     context = {'work_places': work_places, 'me': me}
     return render(request, "work.html", context)
+
+def hobby(request):
+    hobbies = Hobby.objects.all()
+    context = {'hobbies': hobbies}
+    return render(request, "hobby.html", context)

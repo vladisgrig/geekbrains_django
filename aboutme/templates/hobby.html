@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <title>Хобби</title>
+{% endblock %}
+
+{% block content %}
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                  <h2>Мои хобби</h2>
+                  <hr class="star-light">
+                </div>
+                {% for hobby in hobbies %}
+                <div class="row">
+                  <div class="col-lg-4 text-right">
+                      <div id="hobby-photo">
+                        <img src="{{MEDIA_URL}}{{hobby.photo.url}}" alt="">
+                      </div>
+                  </div>
+                  <div class="col-lg-8 text-left">
+                      <div>
+                        <h3>{{hobby.name}}</a></h3>
+                        <p>{{hobby.description}}</p>
+                      </div>
+                  </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </header>
+{% endblock %}

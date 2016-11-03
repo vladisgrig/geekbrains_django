@@ -38,3 +38,11 @@ class PlaceOfWork(models.Model):
 
     def __str__(self):
         return self.company
+
+class Hobby(models.Model):
+    name = models.CharField(max_length=100)
+    photo = models.ImageField(upload_to='images/hobby/')
+    description = models.TextField(default='')
+
+    def __str__(self):
+        return self.name
