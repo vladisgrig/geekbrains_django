@@ -35,6 +35,8 @@ class PlaceOfWork(models.Model):
     end_date = models.IntegerField(choices=YEAR_CHOICES, null=True)
     position = models.CharField(max_length=50)
     site = models.URLField(default='')
+    adress = models.CharField(max_length=200, default='')
+    phone = models.CharField(max_length=20, default='')
 
     def __str__(self):
         return self.company

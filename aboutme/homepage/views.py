@@ -19,6 +19,11 @@ def work_places(request):
     context = {'work_places': work_places, 'me': me}
     return render(request, "work.html", context)
 
+def work_place(request, id):
+    place = PlaceOfWork.objects.get(pk = id)
+    context = {'place': place}
+    return render(request, "work_place.html", context)
+
 def hobby(request):
     hobbies = Hobby.objects.all()
     context = {'hobbies': hobbies}

@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <title>{{place.company}}</title>
+{% endblock %}
+
+{% block content %}
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                  <h2>{{place.company}}</h2>
+                  <hr class="star-light">
+                </div>
+                <div class="col-lg-12 col-lg-offset-3">
+                  <table class="text-left">
+                    <tr>
+                      <td>
+                        Адрес:
+                      </td>
+                      <td>
+                        {{place.adress}}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Телефон:
+                      </td>
+                      <td>
+                        {{place.phone}}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Сайт:
+                      </td>
+                      <td>
+                        <a href="{{place.site}}">{{place.site}}</a>
+                      </td>
+                    </tr>
+                  </table>
+
+                </div>
+            </div>
+        </div>
+    </header>
+{% endblock %}

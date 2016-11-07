@@ -9,3 +9,14 @@ h3 > a:hover{
 #hobby-photo img{
   width: 200px;
 }
+table {
+  font-size: 20px;
+}
+
+td {
+  padding-left: 20px;
+}
+
+td > a, td > a:hover {
+  color: #fff;
+}

@@ -23,6 +23,7 @@ from homepage.views import *
 urlpatterns = [
     url(r'^education/$', education),
     url(r'^work/$', work_places),
+    url(r'^work/(?P<id>\d+)/', work_place),
     url(r'^$', main),
     url(r'^admin/', admin.site.urls),
     url(r'^hobby/$', hobby),
